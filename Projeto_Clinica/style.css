@@ -1,0 +1,80 @@
+/* Reset e Tipografia [cite: 45] */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+
+/* Menu Fixo e Organizado [cite: 81] */
+header {
+    background: #fff;
+    padding: 20px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.container-nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: bold; color: #0056b3; }
+.logo span { color: #28a745; }
+.menu { display: flex; list-style: none; }
+.menu li a { text-decoration: none; color: #333; margin-left: 20px; transition: 0.3s; }
+.menu li a:hover { color: #0056b3; } /* Efeito Hover obrigatório [cite: 79, 82] */
+
+/* Banner Hero [cite: 15] */
+.hero {
+    height: 50vh;
+    background: #0056b3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-cta {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Layout de Seções [cite: 54, 55] */
+.container-sessao { padding: 50px 10%; }
+.bg-cinza { background: #f4f4f4; }
+
+/* Ajuste da Imagem para não ficar estranha [cite: 58] */
+.sobre-grid { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+.sobre-texto, .sobre-imagem { flex: 1; min-width: 300px; }
+.sobre-imagem img {
+    width: 100%;       /* Ocupa a largura da coluna */
+    max-width: 450px;  /* Limite de tamanho */
+    height: auto;      /* Proporção correta */
+    border-radius: 10px;
+}
+
+/* Formulário Profissional [cite: 43] */
+.form-estilizado {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
+.btn-enviar {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-enviar:hover { background: #003d7a; } /* Efeito Hover [cite: 82] */
+
+footer { text-align: center; padding: 20px; background: #333; color: white; }
+
+/* Responsividade Básica [cite: 60, 83] */
+@media (max-width: 768px) {
+    .menu { display: none; } /* Esconde menu no celular para simplificar */
+}
